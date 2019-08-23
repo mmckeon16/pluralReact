@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './main-page.css';
 import Header from './header';
 import FeaturedHouse from './featured-house';
 
-function App() {
+class App extends Component {
   state = {};
   
   componentDidMount() {
@@ -22,7 +22,7 @@ function App() {
 
   determineFeaturedHouse = () => {
     if (this.allHouses) {
-      const randomIndex = Mth.floor(Math.random() * this.allHouses.length);
+      const randomIndex = Math.floor(Math.random() * this.allHouses.length);
       const featuredHouse = this.allHouses[randomIndex];
       this.setState({ featuredHouse });
     };
