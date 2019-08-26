@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import "./house.css";
 import emailIcon from './email.png';
 import Inquiry from './Inquiry';
+import PropTypes from 'prop-types';
+import HouseFilter from '../main-page/house-filter';
 
 
 class house extends Component {
@@ -37,5 +39,6 @@ class house extends Component {
          );
     }
 }
- 
+
+HouseFilter.propTypes = {house: PropTypes.object.isRequired}
 export default house;
