@@ -53,10 +53,9 @@ class App extends Component {
 
   render() {
     let activeComponent = null;
-    if(this.state.country) {
+    if(this.state.country)
       activeComponent = <SearchResults country = {this.state.country}
-        filteredHouses={this.state.filterHouses} setActiveHouse = {this.setActiveHouse}/>
-    }
+        filteredHouses={this.state.filteredHouses} setActiveHouse = {this.setActiveHouse}/>;
     if(this.state.activeHouse)
       activeComponent = <HouseDetail house = {this.state.activeHouse}/>
     if(!activeComponent)
